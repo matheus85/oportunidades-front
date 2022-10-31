@@ -7,20 +7,42 @@
 
 ## Como subir o ambiente local ⚙️
 
-1. Executar o comando para clonar o repositório do frontend.
+Executar os comandos abaixo:.
 
 ```bash
 git clone https://github.com/matheus85/oportunidades-front.git
 ```
 
-2. Dentro da pasta criada para o projeto executar o docker-compose.
+```bash
+cd oportunidades-front
+```
+
 ```bash
 docker-compose up -d --build
 ```
 
-3. No arquivo de ambiente .env na raiz do projeto é necessário trocar o ip na variável API_HOST para o endereço do seu docker.
+```bash
+docker-compose exec app composer install
+```
 
-4. Acessar.
+```bash
+docker-compose exec app cp .env.example .env
 ```
+
+```bash
+docker-compose exec app php artisan key:generate
+```
+
+# Caso apresente erro de permissão rodar o comando abaixo
+```bash
+docker-compose exec app chmod 777 -R /var/www
+```
+
+Alterar a variável API_HOST para o ip da api que deve apontar para a rede do seu docker
+
+# Para acessar
 http://localhost:81
-```
+
+Existem 2 vendedores cadastrados para teste que são executados no seed.
+vendedor1@teste.com - 123456
+vendedor2@teste.com - 123456
