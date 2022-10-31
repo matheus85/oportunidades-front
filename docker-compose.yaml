@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+    app:
+        build:
+            context: .
+            dockerfile: .docker/Dockerfile
+        container_name: laravel-app-front
+        restart: unless-stopped
+        volumes:
+            - ./:/var/www
+        networks:
+            - app-network
+    nginx:
+        image: nginx:alpine
+        container_name: nginx-app-front
+        restart: unless-stopped
+        ports:
+            - "81:80"
+        volumes:
+            - ./:/var/www
+            - .docker/nginx:/etc/nginx/conf.d/
+        networks:
+            - app-network
+
+networks:
+    app-network:
+        name: app-network-front
+        driver: bridge

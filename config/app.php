@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Facade;
 
 return [
 
+    'api_host' => env('API_HOST'),
+    
     /*
     |--------------------------------------------------------------------------
     | Application Name
