@@ -7,8 +7,6 @@
 
 ## Como subir o ambiente local ⚙️
 
-Executar os comandos abaixo:.
-
 ```bash
 git clone https://github.com/matheus85/oportunidades-front.git
 ```
@@ -43,6 +41,6 @@ Alterar a variável API_HOST para o ip da api que deve apontar para a rede do se
 # Para acessar
 http://localhost:81
 
-Existem 2 vendedores cadastrados para teste que são executados no seed.
-vendedor1@teste.com - 123456
-vendedor2@teste.com - 123456
+Existem 2 vendedores cadastrados para teste que são executados no seed.\
+vendedor1@teste.com - 123456\
+vendedor2@teste.com - 123456\
