@@ -33,7 +33,7 @@ docker-compose exec app cp .env.example .env
 docker-compose exec app php artisan key:generate
 ```
 
-# Caso apresente erro de permissão rodar o comando abaixo
+*** Caso apresente erro de permissão rodar o comando abaixo
 ```bash
 docker-compose exec app chmod 777 -R /var/www
 ```
