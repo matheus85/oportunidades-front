@@ -25,8 +25,6 @@ COPY /.docker/start.sh /
 
 RUN chmod +x /start.sh
 
-# RUN chmod 777 -R /var/www/
-
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 ENV PHP_MEMORY_LIMIT=2048M
